@@ -8,7 +8,7 @@ class Search extends React.Component {
     this.state = {
       origin: 'dr5reg',
       destination: 'f25dvk',
-      outbound_date: moment('2020-08-02').format('DD-MMM-YYYY'),
+      outbound_date: moment('2020-08-02', 'YYYY-MM-DD'),
       adult: 1,
       child: 0,
       senior: 0
@@ -26,12 +26,10 @@ class Search extends React.Component {
     if (
       this.state.origin.trim() &&
       this.state.destination.trim() &&
-      this.state.outbound_date.trim() &&
+      this.state.outbound_date.isValid() &&
       this.state.adult + this.state.senior >= 1
     ) {
       this.props.onSearchDepartures(this.state)
-      // this.props.onAddPost(this.state)
-      // this.handleReset()
     }
   }
 
