@@ -1,0 +1,1 @@
+export const FETCH_DEPARTURES = 'FETCH_DEPARTURES'

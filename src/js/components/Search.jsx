@@ -8,7 +8,7 @@ class Search extends React.Component {
     this.state = {
       origin: 'dr5reg',
       destination: 'f25dvk',
-      date: moment('2020-08-02').format('DD-MMM-YYYY'),
+      outbound_date: moment('2020-08-02').format('DD-MMM-YYYY'),
       adult: 1,
       child: 0,
       senior: 0
@@ -26,7 +26,7 @@ class Search extends React.Component {
     if (
       this.state.origin.trim() &&
       this.state.destination.trim() &&
-      this.state.date.trim() &&
+      this.state.outbound_date.trim() &&
       this.state.adult + this.state.senior >= 1
     ) {
       this.props.onSearchDepartures(this.state)
@@ -39,7 +39,7 @@ class Search extends React.Component {
     this.setState({
       origin: '',
       destination: '',
-      date: '',
+      outbound_date: '',
       adult: 1,
       child: 0,
       senior: 0
@@ -72,9 +72,9 @@ class Search extends React.Component {
             <input
               type="text"
               placeholder="Date"
-              name="date"
+              name="outbound_date"
               onChange={this.handleInputChange}
-              value={this.state.date}
+              value={this.state.outbound_date}
             />
           </div>
           <div>
