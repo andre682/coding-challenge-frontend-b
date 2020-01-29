@@ -1,8 +1,14 @@
 import React, { Component } from 'react'
 import Search from './containers/Search'
+import Departures from './containers/Departures'
 class App extends Component {
   render() {
-    return <Search />
+    return (
+      <div>
+        <Search />
+        <Departures />
+      </div>
+    )
   }
 }
 
